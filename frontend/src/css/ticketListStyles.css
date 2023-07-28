@@ -1,0 +1,42 @@
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-container .form-checkbox {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #cbd5e0;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.checkbox-container .form-checkbox:checked {
+  background-color: #fff;
+  border-color: #48bb78;
+}
+
+.checkbox-container .form-checkbox:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: #48bb78;
+  border-radius: 50%;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem; /* Add some space between the labels */
+  width: 140px; /* Add a fixed width to the checkbox label container */
+}
